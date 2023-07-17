@@ -25,19 +25,20 @@
 
         /*Podemos mostrar las variables en pantalla de varias maneras: una de ellas puede ser utilizando la opcion echo(); otra puede ser mendiante print(); */
 
-        Sa = 5;
-        Sb = "7";
+        $a = 5;
+        $b = "7";
         echo "<b><h1>";
         echo($a);
         echo"<br>";
-        echo "</b></h1>"
+        echo($b);
+        echo "</b></h1>";
 
         //Constantes
         //La forma de definr una constante es mediante la funcion define
         //Sintaxis: define("nombre_variables, "valor_variables")
 
         define("capital_colombia", "Bogota");
-        define("habitantes", 700000);
+        define("habitantes", 7000000);
     ?>
 </body>
 </html>
