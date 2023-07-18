@@ -9,68 +9,80 @@
     <h1>Operadores</h1>
 
     <?php
-    //Operadores aritmeticos
+     //Suma: +
+     //Resta: -
+     //Multiplicacion: *
+     //Divicion: /
+     //Modulo: %
+     //Incremento: ++1
+     //Decremento: --1
+     //Exponenciacion: **
 
-    /* El operador de división ("/") devuelve un valor flotante a menos que los    dos operandos sean integers (o strings que se conviertan a integers) 
-    y los números sean divisibles, en cuyo caso será devuelto un valor integer.
-    
-    Los operandos del módulo se convierten en integers (por extracción de la parte decimal) antes del procesamiento.
-    
-    El resultado del operador módulo % tiene el mismo signo que el dividendo — es decir, el resultado de $a % $b 
-    tendrá el mismo signo que $a. Por ejemplo: */
+     $num1 = 1;
+     echo ("x = ".$num1."<br>");
+     $num2 = 5;
+     echo ("x = ".$num2."<br>");
+     $num3 = 4;
+     echo ("x = ".$num3."<br>");
 
-     echo (5 % 3)."\n";           // muestra 2
-     echo (5 % -3)."\n";          // muestra 2
-     echo (-5 % 3)."\n";          // muestra -2
-     echo (-5 % -3)."\n";         // muestra -2
+     $suma = $num1 + $num2;
+     echo ("suma = ".$suma."<br>");
+     $resta = $num1 - $num3;
+     echo ("resta = ".$resta."<br>");
+     $multiplicacion = $suma*$resta;
+     echo ("multiplicacion = ".$multiplicacion."<br>");
+     $final = $multiplicacion++;
+     echo("final =".$final."<br>");
     ?>
+    
+    <?php
+    /*Si se compara un número con un string o la comparación implica strings numéricos, entonces cada string es convertido en un número y 
+    la comparación realizada numéricamente. Estas reglas también se aplican a la sentencia switch. La conversión de tipo no tiene lugar 
+    cuando la comparación es === o !== ya que esto involucra comparar el tipo así como el valor.*/
+    echo "<h1>Operadores de comparacion</h1><br>";
+    Sx = 5;
+    Sy = 5;
+    echo ($x == Sy);
+    echo ($x <= $y);
 
-    <h2>Operadores de comparacion</h2>
+    ?>
 
     <?php
+    // Operadores logicos
+    // AND 0 &&: $a && sb es True si $a y sb son verdaderos
+    // OR 0 ||: $a || $b es true si $a o $b son verdaderos
+    // XOR: $a XOR $b es true si $a es verdadero o $b es verdadero, pero no los dos
+    // !: !$a es true si $a es false
+    echo "<h1>Operadores logicos</h1><br>"
+    $x = 4;
+    $y = 5;
+    
+    if(($x==4) && ($y==5))
+    {
+        print("Estas en lo correcto");
+    }
+    echo"<br>";
+    if(($x==4) && ($y==3))
+    {
+        print("La segunda operacion tambien es correcta");
+    }
 
-    /*Si se compara un número con un string o la comparación implica strings numéricos, entonces cada string es convertido en un número y la comparación realizada numéricamente. Estas reglas también se aplican 
-    a la sentencia switch. La conversión de tipo no tiene lugar cuando la comparación es === o !== ya que esto involucra comparar el tipo así como el valor.*/
+    //Operadores de union (concatenacion) de cadenas
+    // Para la union de cadenas se emplea el pnto (.)
+    echo "<h1>Operadores de union de cadenas</h1><br>"
+    $t = "Ejemplo";
+    $w = 'union';
+    $x = "de";
+    $y = "cadenas";
+    $z = ' ';
+    $resultado1 = $t;
+    $resultado2 = $t.$z.$x.$z.$w.$z.$x.$z.$y;
+    echo '<b><h1>';
+    echo $resultado1;
+    echo "<hr>";
+    echo $resultado2;
+    echo "</b></hr>";
 
-     var_dump(0 == "a"); // 0 == 0 -> true
-     var_dump("1" == "01"); // 1 == 1 -> true
-     var_dump("10" == "1e1"); // 10 == 10 -> true
-     var_dump(100 == "1e2"); // 100 == 100 -> true
-     
-     switch ("a") {
-     case 0:
-         echo "0";
-         break;
-     case "a": // nunca alcanzado debido a que "a" ya ha coincidido con 0
-         echo "a";
-         break;
-     }
     ?>
     
-    <h3>Operadores logicos</h3>
-    <?php
-    /*La razón para tener las dos variaciones diferentes de los operadores "and" y "or" es que ellos 
-    operan con precedencias diferentes. */
-     
-     $a = (false && foo());
-     $b = (true  || foo());
-     $c = (false and foo());
-     $d = (true  or  foo());
-
-     $e = false || true;
-
-     $f = false or true;
-
-     var_dump($e, $f);
-
-     $g = true && false;
-
-     $h = true and false;
-
-     var_dump($g, $h);
-    ?>
-
-
-    /*Operadores de union de cades*/
 </body>
-</html>
